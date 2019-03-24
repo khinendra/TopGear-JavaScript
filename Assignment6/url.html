@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the URL of the document.</p>
+
+<button onclick="getURL()">Show URL</button>
+
+<p id="demo"></p>
+
+<script>
+function getURL() {
+  var x = document.URL;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+<input id="btntest" type="button" value="Change" 
+onclick="location.href= 'http://www.google.com'" />
+</body>
+</html>

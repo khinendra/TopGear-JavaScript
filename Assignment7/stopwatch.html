@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stop watch Demo</title>
+        <script lang="JavaScript">
+                hh = "00";
+                mm = "00";
+                ss = "00";
+
+            function startTimer(){
+                alert("i m here");
+                setTimeout(incrementTimer, 1000);
+
+            }
+            function pauseTimer(){
+
+            }
+            function incrementTimer(){
+                if(ss==60){
+                    ss=0;
+                    mm++;
+                    if(mm<10)
+                        mm="0"+mm;
+                }
+                if(mm==60){
+                    ss=0;
+                    mm=0;
+                    hh++;
+                    if(hh<10)
+                        hh="0"+hh;
+                }
+                ss++;
+                if(ss<10)
+                    ss="0"+ss;
+                
+                
+                
+                document.frm1.counter.value = hh+" : "+mm+" : "+ss;
+            }
+        </script>
+    </head>
+    <form name="frm1">
+        <input type = "text" name="counter" value="00 : 00 : 00"><br>
+        <input type="button" value="Start" onclick="myvar = setInterval(incrementTimer, 1000)">
+        <input type="button" value="Stop" onclick="clearTimeout(myvar)">
+    </form>
+</html>

@@ -1,0 +1,70 @@
+<html><head>
+        <script language="JavaScript">
+            function validateNum(num1, num2)
+            {
+                if(!isFinite(num1) || !isFinite(num2)){
+                alert("Please eneter valid a number!");
+		        return false;
+            }
+            else 
+                return true;
+            }
+        function addNum()
+        {
+            document.frmadd.txt3.value="";
+            num1=parseInt(document.frmadd.txt1.value);
+            num2=parseInt(document.frmadd.txt2.value);
+            if(validateNum(num1, num2)){
+                num3=num1+num2;
+                document.frmadd.txt3.value=num3;
+            }else return false;
+            
+        }
+        function subtractNum()
+        {
+            document.frmadd.txt3.value="";
+            num1=parseInt(document.frmadd.txt1.value);
+            num2=parseInt(document.frmadd.txt2.value);
+            if(validateNum(num1, num2)){
+                num3=num1-num2;
+                document.frmadd.txt3.value=num3;
+            }else 
+            return false;
+        }
+        function mulNum()
+        {
+            document.frmadd.txt3.value="";
+            num1=parseInt(document.frmadd.txt1.value);
+            num2=parseInt(document.frmadd.txt2.value);
+            if(validateNum(num1, num2)){
+                num3=num1*num2;
+                document.frmadd.txt3.value=num3;
+            }else 
+            return false;
+        }
+        function divNum()
+        {
+            document.frmadd.txt3.value="";
+            num1=parseInt(document.frmadd.txt1.value);
+            num2=parseInt(document.frmadd.txt2.value);
+            if(validateNum(num1, num2)){
+                if(num2==0){
+                    alert("enter non zero number");
+                    return false;
+                }
+                num3=num1/num2;
+                document.frmadd.txt3.value=num3;
+            }else 
+            return false;
+        }
+        
+        </script></head><body>
+        <form name="frmadd">
+            Num1 <input type="text" name="txt1"><br>
+            Num2 <input type="text" name="txt2"><br>
+            Result <input type="text" name="txt3" disabled><br>
+        <input type="button" value="Add" name="but1" onClick="addNum()">
+        <input type="button" value="Subtract" name="but1" onClick="subtractNum()">
+        <input type="button" value="Mutliply" name="but1" onClick="mulNum()">
+        <input type="button" value="Divide" name="but1" onClick="divNum()">
+        </form></body></html>

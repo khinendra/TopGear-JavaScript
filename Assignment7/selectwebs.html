@@ -1,0 +1,20 @@
+<html><head>
+        <script language="JavaScript">
+        function disp()
+        {
+            ind = document.f1.webs.selectedIndex;
+            //Comments : index of the selected Item
+           // alert("the value is  \n"+document.f1.webs.options[ind].value);
+            alert("the text is  \n"+document.f1.webs.options[ind].text);
+            location.href = document.f1.webs.options[ind].text;
+        }
+        </script>
+        </head><body>
+        <form name="f1">
+        <select name="webs" onchange="disp()">
+            <option  value="1"> https://itms.wipro.com
+            <option  value="2"> https://outlook.com/owa/wipro.com
+            <option value="3"> https://accountservices.wipro.com
+            <option value="4">https://mywipro.wipro.com/
+        </select>
+        </form></body></html>

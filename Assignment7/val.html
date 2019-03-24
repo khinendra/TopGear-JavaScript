@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo Registration Form</title>
+        <style>
+            div{
+                background-color: grey;
+                position: static;
+                max-width: 400px;
+                height: 200px;
+                border: 2px solidrgb(235, 238, 231)1;
+            }
+            label {
+                float: left;
+                width: 150px;
+                white-space: nowrap;
+            }
+            input {
+                display: block;
+                overflow: hidden;
+                width:150px;
+            }
+            #btn {
+                width: 50px;
+                float: none;
+            
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div id="div1">
+               <label>Name (*)</label> <input type="text" name="username" minlength="3" required>
+               <label>Age (*)</label> <input type="number" name="age" min="1" max="100" required>
+               <label>Email (*)</label> <input type="email" name="usermail" required>
+               <label>Mandatory Fields (*)</label> <input type="submit" id="btn">
+            </div>
+        </form>
+    </body>
+    
+</html>

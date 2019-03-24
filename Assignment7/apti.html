@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aptitude test</title>
+        <script lang="JavaScript">
+            function isSelected(){
+                isChecked = false;
+                selected = "";
+                options = document.getElementsByName("rad");
+                for(i=0; i<options.length; i++){
+                    if(options[i].checked){
+                        selected = options[i].text;
+                        isChecked=true;
+                    }
+                }
+                if(!isChecked){
+                    alert("Please select response");
+                }
+                else{
+                    alert("you selected the response"+selected);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form1"> 
+                <font color="red" size="5"> Who is the owner of micosoft?</font><br>
+                <input type="radio" name="rad" id ="rad">Bill Clinton</radio>
+                <input type="radio" name="rad" id ="rad">Bill Gates</radio>
+                <input type="radio" name="rad" id ="rad">Mark Anderson</radio>
+                <input type="radio" name="rad" id ="rad">Tim Berners Lee</radio>
+                <br><input type = "button" value="Check" onclick="isSelected()">
+
+        </form>
+    </body>
+</html>

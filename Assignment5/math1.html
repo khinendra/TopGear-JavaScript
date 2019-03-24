@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            function mops(){
+                fnum = Math.ceil(-12.5111);
+	            snum = Math.floor(-12.5111);
+                tnum = Math.round(-12.5111);
+                document.getElementById("label1").innerHTML = fnum;
+                document.getElementById("label2").innerHTML = snum;
+                document.getElementById("label3").innerHTML = tnum;
+            }
+        
+        </script>
+    </head>
+    <body onload="mops()">
+        <div>
+        <label>Math.ceil(-12.5111) = </label>
+        <label id="label1"></label>
+    </div>
+    <div>
+        <label>Math.floor(-12.5111) = </label>
+        <label id="label2"></label>
+    </div>
+    <div>
+        <label>Math.round(-12.5111) = </label>
+        <label id="label3"></label>
+    </div>
+    </body>
+</html>

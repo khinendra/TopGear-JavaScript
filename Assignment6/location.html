@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script language="JavaScript">
+            function fun()	{
+               // location.href="status.html";
+                location.replace("status.html");
+                
+            }
+            function print2()	{
+                document.getElementById("label1").innerHTML = "Hostname = "+location.hostname+" && Protocol = "+location.protocol
+
+               //("Hostname = "+location.hostname+" && Protocol = "+location.protocol);
+                
+            }
+        </script>
+    </head>
+    <body>
+            <h3>  Location Demo</h3>
+            <input type="button" value="change" onClick="fun()">
+            <input type="button" value="Print Properties" onClick="print2()">
+            <label id="label1"></label>
+
+    </body>
+</html>
+        

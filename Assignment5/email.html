@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script lang="JavaScript">
+            email = "Meet.At@Wipro.com";
+            document.write("Email = "+email+"<br>");
+            //Find Occurence of @
+            firstIndex = email.indexOf("@",0);
+            lastIndex = email.lastIndexOf("@");
+            if(firstIndex==lastIndex){
+                document.write("[@] appeared at only one place. Index = "+firstIndex);
+            }else{
+                    nextIndex=0;
+                    count = 0;
+                    while(nextIndex!=-1){
+                        nextIndex = email.indexOf("@",firstIndex+1);
+                        firstIndex = nextIndex;
+                        count++;
+                    }
+                    alert("[@] appeared at "+count+" places.");
+                    document.write("[@] appeared at "+count+" places.");
+                }
+                //Find occurence of DOT(.)
+                nextIndex = -1;
+                count = -1;
+                do{
+                    nextIndex = email.indexOf(".",nextIndex+1);
+                    count++;
+                }while(nextIndex!=-1)
+                document.write("<br>[.] appeared at "+count+" places.");
+        </script>
+    </head>
+</html>
