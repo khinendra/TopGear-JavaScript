@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script lang="JavaScript">
+        function validate(){
+            var err = new Array();
+            valid = true;
+            i=0;
+            var name = document.form1.ename.value;
+            if(name==null || name==''){
+                err[i++] = "name is required.\n";
+            }
+            var eid = document.form1.eid.value;
+            if(eid==null || eid==''){
+                err[i++] = "Employee ID is required.\n";
+            }
+            var band = document.form1.band.value;
+            if(band==null || band==''){
+                err[i++] = "Band is required.\n";
+            }
+            var yoj = document.form1.yoj.value;
+            if(yoj==null || yoj==''){
+                err[i++] = "Year of joining is required.\n";
+            }
+            if(err.length==0){
+                document.forms[0].submit();
+            }else{
+                alert('Below field are required:\n'+err)
+            }
+        }
+        
+    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.header {
+  background-color: #29252b;
+  color: #ffffff;
+  padding: 10px;
+  text-align-last: center;
+}
+
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+label{
+    float: left; 
+    
+}
+input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Employee Details Entry Form</h1>
+</div>
+<form action="register" name="form1">
+        <div class="container">
+          <h1>Register</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+            
+          <label for="ename"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="ename">
+      
+          <label for="eid"><b>Employee ID</b></label>
+          <input type="text" placeholder="Enter Emp ID" name="eid">
+      
+          <label for="band"><b>Band</b></label>
+          <input type="text" placeholder="Enter Band" name="band">
+      
+          <label for="yoj"><b>Year of Joining</b></label>
+          <input type="text" placeholder="Enter Year of Joining" name="yoj">
+          <hr>
+      
+          <button type="button" class="registerbtn" onclick="validate()">Register</button>
+        </div>
+      
+        
+      </form>
+</body>
+</html>
