@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script lang="JavaScript">
+        function displayName(countryName){
+            var c = countryName;
+            document.getElementById('country_name').value = c;
+
+        }
+
+        function clearTe(){
+
+            document.getElementById('country_name').value = "";
+
+        }
+        </script>
+        <style>
+            *, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: rebeccapurple;
+}
+
+.container {
+  background: white;
+  margin: 0 auto;
+  padding: 5%;
+  width: 75%;
+}
+        .row {
+            display: flex;
+            height: 400px;
+        }
+
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+        input{
+            position:absolute;
+            min-width:10%;
+            height: 5%;
+            background-color:#CCC;
+            border: 1px solid grey;
+            font-size: 20pt;
+            color: blue;
+            margin-left: 400px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="header">
+
+        </div>
+        <div class="row">
+            <div class="column" >
+                <img src="br.png" id="Brazil" onmouseover="displayName('Brazil')" onmouseout="clearTe()">
+            </div>
+            <div class="column" >
+                <img src="ca.png" id = "Canada" onmouseover="displayName('Canada')" onmouseout="clearTe()">
+            </div>
+            <div class="column" >
+                <img src="us.png" id="USA" onmouseover="displayName('USA')" onmouseout="clearTe()">
+            </div>
+        </div>
+        <div class="txt">
+            <input type="text" id="country_name">
+        </div>
+    </div>
+    </body>
+</html>
