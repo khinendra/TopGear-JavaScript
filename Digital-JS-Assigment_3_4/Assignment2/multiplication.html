@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+          console.log("asd")
+        function genTable(){
+            if(document.getElementById("myTable")){   
+                var tab = document.getElementById("myTable");
+                document.body.removeChild(tab);
+            }
+            var num = document.getElementById("num1").value;
+            if(num=="" || num==null){
+                alert('Please enter number')
+            }
+            else{
+                var x = document.createElement("TABLE");
+                x.setAttribute("id", "myTable");
+                x.setAttribute("border", "1");
+                document.body.appendChild(x);
+                    for(var i=1; i<=12; i++){
+                       // alert(" "+num*i);
+                        var y = document.createElement("TR");
+                        y.setAttribute("id", "myTr");
+                        document.getElementById("myTable").appendChild(y);
+                        var z = document.createElement("TD");
+                        var t = document.createTextNode(i*num);
+                        z.appendChild(t);
+                        document.getElementById("myTr").appendChild(z);
+                       
+                    }
+                }
+        }
+        </script>
+    </head>
+    <body>
+      
+        <label for="num1">Enter the Number</label>
+        <input type="number" id ="num1" name="num1" required>
+        <button onclick="genTable()">Generate Table</button>
+
+
+    </body>
+</html>

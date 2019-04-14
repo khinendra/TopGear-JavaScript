@@ -1,0 +1,24 @@
+<script lang="JavaScript">
+var x = [50, 2, 1, 9,300]
+//console.log(x.length);
+var arr = new Array();
+var temp;
+for(var i = 0; i<x.length; i++){
+    for(var j=0; j<(x.length-i)-1;j++){
+        var num1 = x[j].toString()[0];
+        var num2 = x[j+1].toString()[0];
+
+        if(num1<num2){
+            temp = x[j];
+            x[j]=x[j+1];
+            x[j+1] = temp;
+        }
+        
+    }
+}
+highest="";
+for(var k = 0; k<x.length; k++){
+    highest = highest+x[k];
+}
+console.log("Largest number="+highest);
+</script>
